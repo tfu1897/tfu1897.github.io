@@ -18,3 +18,9 @@ permalink: /Projects/tank/
 	<p>For software, I used the ESPASyncWebServer and Wifi libraries, which joins my home Wifi and hosts an HTTP server, where anyone on my home wifi can join.  The system has two modes: an automatic and manual mode.  In automatic mode, the board connects to a NTP time server to fetch the date and time.  Next, the board uses the Dusk2Dawn solar calculator library to calculate the approximate sunrise and sunset times for my coordinates.  Then the board only powers the relay during the day, simulating real life sunrise and sunset times.  In manual mode I can just press a button on the web server to control the lights. </p>
 
 </div><!-- /.hardware -->
+
+<div class="software">
+	<h1>Conclusion</h1>
+	<p>This project was a pretty good introduction to internet of things projects.  As of writing this, its been running for a month with minimal problems (the power went off once and I had to reset the board, and the relay I used is kind of low quality). In the future, theres room to add more devices to my tank like a feeder, heater, and historical trends. I'm also thinking about running an OPC UA server on ESP32 and collecting data through a SCADA software like Ignition so I can control the tank from anywhere in the world.  </p>
+
+</div><!-- /.hardware -->
