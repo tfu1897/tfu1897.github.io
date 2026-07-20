@@ -45,3 +45,10 @@ permalink: /Projects/drone/
 	<h1>Autonomous performance</h1>
 	<p>I used Betaflight's GPS return to home and position hold features, and the drone reliably returns home.  Betaflight's autoland feature still leaves much to be desired, so usually I just manually land it. However, I didn't use a magnetometer (compass) so the drone has to calculate heading through GPS and inertial measurement, which isn't ideal for autonomous flight. The position hold is also just alright, it drifts a few feet, and doesn't really hover perfectly still. This is expected, because the drone only has GPS, barometer, and IMU, as GPS and barometer are only accurate up to a few feet.  Usually commerical drones have way better position hold because they have extra sensors like lidar and optical flow sensors, which are more precise at close distances. I would only use position hold in an emergency. </p>
 </div><!-- /.blurb -->
+
+<div class="extra">
+	<h1>Extra antenna stuff</h1>
+	<p>This project really got me thinking about basic RF concepts like antenna gain and transmission power.  So I decided to try building my own high gain helical antenna.  I used a metal lid as a ground plane, and used a 3d-printed jig to coil wire around to make an X turn helical antenna.  Then I used a coaxial cable with an SMA connector and soldered the ground to the ground plane, and the signal wire to the antenna's active element.  </p>
+	
+
+</div><!-- /.blurb -->
