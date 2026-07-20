@@ -10,11 +10,11 @@ permalink: /Projects/tank/
 </div><!-- /.blurb -->
 <div class="hardware">
 	<h1>Hardware</h1>
-	<p>I used an ESP32-C6 board from the Seeed Studio XIAO series, for its compact size and native support for Wifi 6 and external antennas.  For controlling the lights, I used a standard 5V low level trigger relay with optical isolation rated for 300W. I connected the relay to a power strip (I didn't want to cut up my lights) that powered on a 75W heat lamp and a 10.0 15W UVB bulb.  I powered the whole system from another power strip with a fuse,and powered the ESP32 off a regular 5V USB power brick. </p>
+	<p>I used an ESP32-C6 board from the Seeed Studio XIAO series, for its compact size and native support for Wifi 6 and external antennas.  For controlling the lights, I used a standard 5V low level trigger relay with optical isolation rated for 300W. I connected the relay to a power strip (I didn't want to cut up my lights) that powered on a 75W heat lamp and a 10.0 15W UVB bulb.  I powered the whole system from another power strip with a fuse, and powered the ESP32 off a regular 5V USB power brick. </p>
 
 </div><!-- /.hardware -->
 <div class="software">
 	<h1>Software</h1>
-	<p1></p1>
+	<p>For software, I used the ESPASyncWebServer and Wifi libraries, which joins my home Wifi and hosts an HTTP server, where anyone on my home wifi can join.  The system has two modes: an automatic and manual mode.  In automatic mode, the board connects to a NTP time server to fetch the date and time.  Next, the board uses the Dusk2Dawn solar calculator library to calculate the approximate sunrise and sunset times for my coordinates.  Then the board only powers the relay during the day.  In manual mode I can just press a button on the web server to control the lights. </p>
 
 </div><!-- /.hardware -->
