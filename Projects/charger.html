@@ -11,4 +11,6 @@ permalink: /Projects/charger/
 	<p>Here were my design criteria for this board: I wanted it to take 2-6s voltage, which is around 7.4-25.2V, regulate it down to 5V and power a USB port, and have a way to represent voltage so the user knows how much power is left in their battery. </p>
 		
 	<p>For regulating the voltage, I used a LM7805 linear voltage regulator which can take 7-35V in and output 5V 1.5A. For powering the USB port, I used a TPS2513 chip, which connects to the D+ and D- of a USB port and matches the voltage it sees. For example, if you had an iphone that had 2.7V on D+ and 2.0V on D-, the chip would bring its own data pins to the same voltage, allowing the iphone to accept the USB connection.  For representing the battery charge, I used a 1/5 voltage divider, a Seeed Xiao SAMD21 microcontroller, and 4 LEDs.  The microcontroller detects the voltage of the battery, calculates how many cells the battery has, calculates the average voltage per cell, then turns on a certain amount of LEDs based on the cell voltage.  For example, a fully charged Lipo has 4.2V per cell, so 4 LEDs would turn on. </p>
+	<p>I used KiCAD to design the board, JLCPCB for fabrication, and I bought all the parts from Digikey and hand soldered everything (BAD IDEA)</p>
+	<h1>Results</h1>
 </div>
