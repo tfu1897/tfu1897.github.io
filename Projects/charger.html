@@ -17,7 +17,7 @@ permalink: /Projects/charger/
 	<p>The board was able to power a variety of things, like charging a phone and powering arduino boards.  However, I ran into a big issue with heat. Because I used a linear regulator, it uses resistance to drop voltage, so all the extra voltage just gets wasted as heat. For example, dropping 12V to 5V at 1A makes 7W of heat. The board could only output like 5W power before thermal throttling. I also added a heat sink but it didn't really fix the problem. In hindsight I should have put ground planes on both layers and used way thicker traces to help soak up heat. </p>
 		<img src="{{ 'images/board.jpg' | relative_url }}" class="centered-image">
 	<h1>Revisions</h1>
-	<p>To try to solve my heat issue, I added an external bypass transistor, using a TIP42C power transistor that could take up to 6A.  I also added a 4.7 ohm resistor in series with the voltage regulator.  From my understanding, when the voltage regulator draws more than about 200 mA, the voltage drop across the resistor and transistor base reaches 0.9V, allowing current to flow through the transistor, bypassing the regulator. </p>
+	<p>To try to solve my heat issue, I added an external bypass transistor, using a power transistor in parallel with the regulator. </p>
 	<h1>Conclusion</h1>
 	<p>In a 2nd version I would want a switching regulator instead of a linear regulator, automatic shutoff if the battery gets too low, current monitoring, and reverse polarity protection. In a 3rd verison maybe add a usbc power delivery controller. By then it would actually be useful. </p> 
 </div>
