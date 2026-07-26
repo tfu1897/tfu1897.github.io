@@ -12,7 +12,7 @@ permalink: /Projects/drone/
 	<h1>Parts</h1>
 	<p>
 		Frame: Phisital Aries4 4 inch foldable frame </p>
-	<p>I chose to go with a 4-inch sized frame because they have a good balance of efficiency and weight. While 5-inch drones are usually pretty heavy (like 750g+), 4-inch drones are usually just stretched out 3-inch drones, and it's reasonable for them to weigh around 250g, and the extra propeller diameter is more efficient. 
+	<p>4 inch frames are very popular for long range builds because they are light and 
 	</p>
 	<p>Flight controller: Speedybee F405 Mini</p>
 	<p>ESC: JHEMCU EM40 40A 2-6s 4in1 ESC</p>
@@ -29,11 +29,12 @@ permalink: /Projects/drone/
 </div>
 
 <div class="blurb">
-	<h1>Results </h1>
+	<h1>Performance </h1>
 	<p>Without the battery and including the action camera, the drone ended up weighing 190g, which is a bit on the heavy side but oh well.  </p>
 	<img src="{{ 'images/weight.jpg' | relative_url }}" class="centered-image">
 	<h1>Flight time and range </h1>
-	<p>With the action camera and using a 4S 850 mAh battery, I was able to get around 10 minutes of flight time just hovering in position hold mode.  While flying around semi-agressively, the drone can cover about 8-10km of total distance. </p>
+	<p>With the action camera and using a 4S 850 mAh battery, I was able to get around 10 minutes of flight time just hovering in position hold mode.  While flying around semi-agressively, the drone can cover about 8-10km of total distance.  With 14 and 6.7 dBi patch antennas, skyzone steadyview 3.3 reciever, and 1.6W transmit power, I was able to get 5km away from my starting point. not half bad!  At that point battery became a bigger issue than range, I think it could probably push 8 km. At the 5km point I still had a reciever link quality of 100% (LQ 5:100), and the video was still decently clear for analog. </p>
+	<img src="{{ 'images/picture.jpg' | relative_url }}" class="centered-image">
 	<h1>Autonomous performance</h1>
 	<p>I used Betaflight's GPS return to home and position hold features, and the drone reliably returns home.  Betaflight's autoland feature still leaves much to be desired, so usually I just manually land it. However, I didn't use a magnetometer (compass) so the drone has to calculate heading through GPS and inertial measurement, which isn't ideal for autonomous flight. The position hold is also just alright, it drifts a few feet, and doesn't really hover perfectly still. This is expected, because the drone only has GPS, barometer, and IMU, as GPS and barometer are only accurate up to a few feet.  Usually commerical drones have way better position hold because they have extra sensors like lidar and optical flow sensors, which are more precise at close distances. I wouldn't leave it alone in position hold mode.</p>
 </div><!-- /.blurb -->
