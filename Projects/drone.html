@@ -8,6 +8,17 @@ permalink: /Projects/drone/
 	<p>The goal of this project was to build a long range fpv drone for filming videos and such. I also wanted to make the drone as un-losable as possible. I included GPS return to home and position hold, so if I lost signal the drone could try to fly back by itself.  I also added GPS telemetry logs and beepers, so if the drone crashed, I would have the approximate coordinates and the beeper would make noise and help me find it.</p>
 	<img src="{{ 'images/droneground.jpg' | relative_url }}" class="centered-image">
 </div>
+
+<div class="blurb">
+	<h1>Performance </h1>
+	<p>Without the battery and including the action camera, the drone ended up weighing 190g, which is a bit on the heavy side.  </p>
+	<img src="{{ 'images/weight.jpg' | relative_url }}" class="centered-image">
+	<h1>Flight time and range </h1>
+	<p>With the action camera and using a 4S 850 mAh battery, I was able to get around 10 minutes of flight time just hovering in position hold mode.  While flying around semi-agressively, the drone can cover about 8-10km of total distance.  With 14 and 6.7 dBi patch antennas, skyzone steadyview 3.3 reciever, and 1.6W transmit power, I was able to get 5km away from my starting point. not half bad!  At that point battery became a bigger issue than range, I think it could probably push 8 km. At the 5km point I still had a reciever link quality of 100% (LQ 5:100), and the video was still decently clear for analog. </p>
+	<img src="{{ 'images/picture.jpg' | relative_url }}" class="centered-image">
+	<h1>Autonomous performance</h1>
+	<p>I used Betaflight's GPS return to home and position hold features, and the drone reliably returns home.  Betaflight's autoland feature still leaves much to be desired, so usually I just manually land it. However, I didn't use a magnetometer (compass) so the drone has to calculate heading through GPS and inertial measurement, which isn't ideal for autonomous flight. The position hold is also just alright, it drifts a few feet, and doesn't really hover perfectly still. This is expected, because the drone only has GPS, barometer, and IMU, as GPS and barometer are only accurate up to a few feet.  Usually commerical drones have way better position hold because they have extra sensors like lidar and optical flow sensors, which are more precise at close distances. I wouldn't leave it alone in position hold mode.</p>
+</div><!-- /.blurb -->
 <div class="Parts">
 	<h1>Parts</h1>
 	<p>
@@ -27,18 +38,6 @@ permalink: /Projects/drone/
 	<p>Analog camera: Caddx ANT lite </p>
 	<p>Action camera: Runcam Thumb 2, A budget camera (~$100) that can film up to 4K60FPS  </p>
 </div>
-
-<div class="blurb">
-	<h1>Performance </h1>
-	<p>Without the battery and including the action camera, the drone ended up weighing 190g, which is a bit on the heavy side.  </p>
-	<img src="{{ 'images/weight.jpg' | relative_url }}" class="centered-image">
-	<h1>Flight time and range </h1>
-	<p>With the action camera and using a 4S 850 mAh battery, I was able to get around 10 minutes of flight time just hovering in position hold mode.  While flying around semi-agressively, the drone can cover about 8-10km of total distance.  With 14 and 6.7 dBi patch antennas, skyzone steadyview 3.3 reciever, and 1.6W transmit power, I was able to get 5km away from my starting point. not half bad!  At that point battery became a bigger issue than range, I think it could probably push 8 km. At the 5km point I still had a reciever link quality of 100% (LQ 5:100), and the video was still decently clear for analog. </p>
-	<img src="{{ 'images/picture.jpg' | relative_url }}" class="centered-image">
-	<h1>Autonomous performance</h1>
-	<p>I used Betaflight's GPS return to home and position hold features, and the drone reliably returns home.  Betaflight's autoland feature still leaves much to be desired, so usually I just manually land it. However, I didn't use a magnetometer (compass) so the drone has to calculate heading through GPS and inertial measurement, which isn't ideal for autonomous flight. The position hold is also just alright, it drifts a few feet, and doesn't really hover perfectly still. This is expected, because the drone only has GPS, barometer, and IMU, as GPS and barometer are only accurate up to a few feet.  Usually commerical drones have way better position hold because they have extra sensors like lidar and optical flow sensors, which are more precise at close distances. I wouldn't leave it alone in position hold mode.</p>
-</div><!-- /.blurb -->
-
 <div class="extra">
 	<h1>Extra antenna stuff</h1>
 	<p>This project really got me thinking about basic RF concepts like antenna gain and transmission power.  So I decided to try building my own high gain helical antenna.  I used a metal lid as a ground plane, and used a 3d-printed jig to coil wire around to make a 7 turn helical antenna tuned for 5.8 gHz.  Then I used a coaxial cable with an SMA connector and soldered the ground to the ground plane, and the signal wire to the antenna's active element.  I estimated the antenna to have a gain of about 13.5 dBi, and a half power beamwidth of 40 degrees using an online calculator.  I was able to get about 2.5km away on 800 mW using it, and then I got scared and turned around. </p>
