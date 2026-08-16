@@ -19,7 +19,7 @@ permalink: /Projects/charger2/
 	</p>
 	<img src="{{ 'images/program.jpeg' | relative_url }}" class="centered-image">
 	<h1>Result</h1>
-	<p>The board outputs about 5.15V which is not perfect but it works. On my multimeters AC setting I got ripple voltage of about 0.1V which is pretty noisy, and my layout could definitely be improved. I was able to charge at about 10W or 5V 2A using this board, and the buck converter gets moderately warm at this power.  With the output off the board draws around 6 mA, so it could survive a while without destroying a battery. </p>
+	<p>The board outputs about 5.15V which is not perfect but it works. On my multimeters AC setting I got ripple voltage of about 0.1V which is pretty noisy, and my layout could definitely be improved. I was able to charge at about 10W or 5V 2A using this board, and the buck converter gets moderately warm at this power.  With the output off the board draws around 6 mA, so it could survive a while without destroying a battery. In the 10W test I had issues with the power output being unstable, so I added a big 100 uf electroylytic capacitor to the 5v output and it seemed to fix the problem. </p>
 	<img src="{{ 'images/powered.jpeg' | relative_url }}" class="centered-image">
 	<img src="{{ 'images/powerout.jpg' | relative_url }}" class="centered-image">
 	<h1>Conclusion</h1>
